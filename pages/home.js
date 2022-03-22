@@ -31,7 +31,7 @@ const Home = props => (
     </header>
 
     <div>
-      Stopped at 41:17
+      Progress: 41:17
     </div>
   </div>
 );
