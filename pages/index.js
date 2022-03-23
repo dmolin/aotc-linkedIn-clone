@@ -10,6 +10,7 @@ export default function Home() {
       </Head>
 
       Let's go Huntin!
+      <div className="w-7" />
     </div>
   )
 }
