@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image"
 import {
   MdExplore as ExploreIcon,
@@ -11,7 +12,10 @@ import SignInButton from "@/client/SignInButton";
 import CardLink from "@/client/CardLink";
 
 const HomePage = props => (
-  <div>
+  <div className="space-y-10">
+    <Head>
+      <title>Huntin</title>
+    </Head>
     <header className="flex justify-around items-center py-4">
       <div className="relative w-36 h-10">
         <Image
@@ -35,18 +39,20 @@ const HomePage = props => (
       </div>
     </header>
 
-    <main className="flex flex-col md:flex-row items-center max-w-screen-lg mx-auto">
+    <main className="flex flex-col md:flex-row items-center md:items-start max-w-screen-xl mx-auto gap-4">
       <div className="space-y-6 xl:space-y-10 gap-4 flex-1">
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl md:text-left text-amber-800/80 _max-w-xl !leading-snug pl-4 xl:pl-0">Welcome to your professional community</h1>
-        <div className="">
+        <div className="md:pr-3 lg:pr-10">
           <CardLink text="Search for a job" />
           <CardLink text="Find a person you know" />
           <CardLink text="Learn a new skill" />
         </div>
       </div>
 
-      <div className="md:flex-1 relative w-80 h-80 md:w-[650px] md:h-[650px]">
-        <Image src="/images/huntin-bg.svg" layout="fill" priority />
+      <div className="md:flex-1 w-96 h-96 md:w-[650px] md:h-[650px]">
+        <div className="relative w-full h-full">
+          <Image src="/images/huntin-bg.svg" layout="fill" priority />
+        </div>
       </div>
     </main>
 
