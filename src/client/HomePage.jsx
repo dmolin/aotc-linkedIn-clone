@@ -11,7 +11,7 @@ import HeaderLink from "@/client/HeaderLink";
 import SignInButton from "@/client/SignInButton";
 import CardLink from "@/client/CardLink";
 
-const HomePage = props => (
+const HomePage = ({ providers }) => (
   <div className="space-y-10">
     <Head>
       <title>Huntin</title>
@@ -34,7 +34,7 @@ const HomePage = props => (
         </div>
 
         <div className="pl-4">
-          <SignInButton />
+          <SignInButton providers={providers} />
         </div>
       </div>
     </header>
