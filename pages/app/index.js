@@ -1,3 +1,1 @@
-const Index = () => <div>Protected index</div>
-
-export default Index;
+export { default } from "@/client/App";
