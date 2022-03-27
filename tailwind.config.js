@@ -10,8 +10,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["ui-sans-serif", ...defaultTheme.fontFamily.sans]
+      },
+      screens: {
+        lg: '1128px',
+        lgp: '1161px'
       }
-    },
+    }
   },
   plugins: [],
 }
