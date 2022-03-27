@@ -32,9 +32,6 @@ const HomePage = ({ providers }) => {
 
   return (
     <div className="space-y-10">
-      <Head>
-        <title>Huntin</title>
-      </Head>
       <header className="flex justify-around items-center py-4">
         <div className="relative w-36 h-10">
           <Image

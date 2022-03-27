@@ -6,10 +6,6 @@ import Header from "@/client/Header";
 const App = (props) => {
   return (
     <div>
-      <Head>
-        <title>Huntin</title>
-      </Head>
-
       <Header />
     </div>
   )

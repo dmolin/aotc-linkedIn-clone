@@ -1,3 +1,12 @@
+## What's this?
+
+A small project replicating part of the LinkedIn UI exclusively for study purposes.
+This is no part of any production or commercial endeavour and has solely the purpose of experimentation and study.
+
+This is part of a series of personal study projects that I group under the catchphrase "Attack Of The Clones" (aotc-).
+The purpose here is to start from a real life example and show how I would re-implement/imagine part of those products with my current favourite tech stacks.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
