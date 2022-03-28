@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MdSearch } from "react-icons/all";
+import { MdSearch } from "react-icons/md";
 const Header = (props) => {
   return (
     <header>

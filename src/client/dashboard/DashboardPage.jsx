@@ -3,12 +3,14 @@ import { signOut } from "next-auth/react";
 
 import Header from "@/client/Header";
 
-const App = (props) => {
+const DashboardPage = (props) => {
   return (
     <div>
       <Header />
+
+      <button onClick={() => signOut()}>Sign out</button>
     </div>
   )
 };
 
-export default App;
+export default DashboardPage;

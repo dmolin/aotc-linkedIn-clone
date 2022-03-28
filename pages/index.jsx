@@ -8,4 +8,4 @@ export async function getServerSideProps (context) {
   };
 }
 
-export { default } from "@/client/HomePage"
+export { default } from "@/client/signIn/LoginPage"

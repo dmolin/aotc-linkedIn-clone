@@ -10,12 +10,11 @@ import {
 } from "react-icons/md"
 
 import HeaderLink from "@/client/HeaderLink";
-import SignInButton from "@/client/SignInButton";
-import CardLink from "@/client/CardLink";
-import JoinNowButton from "@/client/JoinNowButton";
-import SignInPanel from "@/client/SignInPanel";
+import SignInButton from "./SignInButton";
+import JoinNowButton from "./JoinNowButton";
+import SignInPanel from "./SignInPanel";
 
-const HomePage = ({ providers }) => {
+const LoginPage = ({ providers }) => {
   const router = useRouter();
   const { status } = useSession();
 
@@ -83,4 +82,4 @@ const HomePage = ({ providers }) => {
   );
 };
 
-export default HomePage;
+export default LoginPage;
