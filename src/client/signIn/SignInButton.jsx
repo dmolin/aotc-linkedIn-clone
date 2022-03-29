@@ -10,9 +10,9 @@ const SignInButton = ({ providers }) => {
       placement="bottom"
       portalClassName="signin-menu-popover"
       content={
-        <div className="p-4 px-6 pb-6 flex flex-col content-center">
-          <div className="text-md font-semibold mb-4">How do you want to Sign In?</div>
-          {Object.values(providers).map(p => (
+        <div className="p-4 px-6 pb-6 flex flex-col gap-2 content-center">
+          <div className="text-md font-semibold mb-2">How do you want to Sign In?</div>
+          {Object.values(_.omit(providers, ["credentials"])).map(p => (
             <button
               className="text-lg flex flex-row gap-2 items-center border py-2 px-4 rounded-md border-blue-300 bg-blue-50 hover:bg-blue-500 text-gray-600 hover:text-white font-semibold"
               key={p.id}

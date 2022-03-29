@@ -8,7 +8,7 @@ const DashboardPage = (props) => {
     <div>
       <Header />
 
-      <button onClick={() => signOut()}>Sign out</button>
+      <button className="bp4-button mt-8" onClick={() => signOut()}>Sign out</button>
     </div>
   )
 };
