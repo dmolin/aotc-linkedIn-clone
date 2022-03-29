@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { bool, string } from "prop-types";
-import _ from "lodash";
+import { bool } from "prop-types";
 
 import LIInput from "@/client/LIInput";
 
@@ -30,8 +29,11 @@ const LIPassword = (props) => {
         type={visible ? "text" : "password"}
         className="pr-20"
         rightElement={
-          <button className="p-2 hover:bg-gray-200 cursor-pointer text-gray-700" onClick={_toggleVisibility}>
-            Show
+          <button
+            className="p-2 hover:bg-gray-200 cursor-pointer text-gray-700"
+            onClick={_toggleVisibility}
+          >
+            {visible ? "Hide" : "Show"}
           </button>
         }
       />

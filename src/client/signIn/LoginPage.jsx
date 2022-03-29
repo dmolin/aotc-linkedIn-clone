@@ -63,11 +63,6 @@ const LoginPage = ({ providers }) => {
             className="text-center text-3xl sm:text-4xl md:text-6xl md:text-left text-amber-800/80 !leading-snug ">Welcome
             to your professional community</h1>
           <div className="flex flex-col items-center md:flex-none md:items-stretch md:pr-3 lg:pr-10">
-{/*
-            <CardLink text="Search for a job"/>
-            <CardLink text="Find a person you know"/>
-            <CardLink text="Learn a new skill"/>
-*/}
             <SignInPanel />
           </div>
         </div>
