@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { MdSearch, MdHome, MdPeople } from "react-icons/md";
 import { BsBriefcaseFill, BsFillChatDotsFill } from "react-icons/bs";
-import { IoChatboxEllipses, IoNotifications } from "react-icons/io5";
-import { GrHomeRounded, GrGroup, GrBusinessService, GrChat, GrNotification } from "react-icons/gr";
+import { IoNotifications } from "react-icons/io5";
 import { SiGravatar } from "react-icons/si";
 import { CgMenuGridR } from "react-icons/cg";
 import { motion } from "framer-motion";
@@ -80,6 +79,7 @@ const Header = (props) => {
           {_renderThemeToggle()}
         </div>
       </div>
+      3:00:06
     </header>
   )
 };
