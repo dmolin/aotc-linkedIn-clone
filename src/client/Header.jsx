@@ -20,14 +20,13 @@ const Header = (props) => {
   const _renderThemeToggle = () => {
     if (!mounted) return null;
 
-    console.log("theme", resolvedTheme);
     return (
       <div
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-        className={`bg-gray-600 flex flex-row items-center px-0.5 rounded-full h-6 w-14 cursor-pointer flex-shrink-0 relative ${resolvedTheme === "dark" ? "justify-end" : "justify-start"}`}
+        className={`bg-gray-600 flex flex-row items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0 relative ${resolvedTheme === "dark" ? "justify-end" : "justify-start"}`}
       >
-        <span className="absolute left-1">🌜</span>
-        <span className="absolute right-1">🌝</span>
+        <span className="absolute left-0.5">🌜</span>
+        <span className="absolute right-0.5">🌝</span>
         { /* animated toggle */}
         <motion.div
           className={`w-5 h-5 bg-white rounded-full z-40`}
@@ -55,12 +54,12 @@ const Header = (props) => {
   }
 
   return (
-    <header className="sticky top-0 z-40 bg-white dark:bg-[#1D2226] py-1.5 px-1">
+    <header className="sticky top-0 z-40 bg-white dark:bg-li-gray-800 pt-1.5 px-1">
       <div className="flex flex-row items-center place-content-between max-w-screen-lg mx-auto">
         {/* left */}
         <div className="flex items-center flex-row flex-shrink-0 gap-2">
           {_renderLogo()}
-          <div className="flex items-center space-x-1 dark:md:bg-gray-700 py-2.5 px-4 rounded">
+          <div className="flex items-center space-x-1 md:bg-li-blue-100 dark:md:bg-gray-700 py-2.5 px-4 rounded">
             <MdSearch className="hidden md:inline-flex text-2xl" />
             <input placeholder="Search" className="hidden md:inline-flex bg-transparent focus:outline-none placeholder-black/70 dark:placeholder-white/75 flex-grow" />
           </div>
@@ -79,7 +78,6 @@ const Header = (props) => {
           {_renderThemeToggle()}
         </div>
       </div>
-      3:00:06
     </header>
   )
 };
