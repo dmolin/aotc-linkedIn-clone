@@ -13,6 +13,8 @@ import HeaderLink from "@/client/HeaderLink";
 import SignInButton from "./SignInButton";
 import JoinNowButton from "./JoinNowButton";
 import SignInPanel from "./SignInPanel";
+import LinkedInLogo from "@/client/LinkedInLogo";
+import BlankLayout from "@/client/layouts/BlankLayout";
 
 const LoginPage = ({ providers }) => {
   const router = useRouter();
@@ -35,11 +37,7 @@ const LoginPage = ({ providers }) => {
     <div className="space-y-10">
       <header className="flex justify-between items-center py-4 max-w-screen-lg mx-auto px-4">
         <div className="relative w-[135px] h-10">
-          <Image
-            src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg"
-            layout="fill"
-            objectFit="contain"
-          />
+          <LinkedInLogo extended objectFit="contain" />
         </div>
 
         <div className="flex items-center sm:divide-x divide-gray-300 items-end">
@@ -76,5 +74,7 @@ const LoginPage = ({ providers }) => {
     </div>
   );
 };
+
+LoginPage.layout = BlankLayout;
 
 export default LoginPage;

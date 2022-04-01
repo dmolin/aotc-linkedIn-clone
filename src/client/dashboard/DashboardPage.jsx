@@ -3,6 +3,7 @@ import { signOut } from "next-auth/react";
 
 import Header from "@/client/Header";
 import Sidebar from "@/client/dashboard/Sidebar";
+import AppLayout from "@/client/layouts/AppLayout";
 
 const DashboardPage = (props) => {
   return (

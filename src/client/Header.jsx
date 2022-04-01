@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import HeaderLink from "@/client/HeaderLink";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import LinkedInLogo from "@/client/LinkedInLogo";
 
 const Header = (props) => {
   const [mounted, setMounted] = useState(false);
@@ -41,24 +42,12 @@ const Header = (props) => {
     );
   }
 
-  const _renderLogo = () => {
-    let src = "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg";
-    let size={ w: 45, h: 45 };
-    if (resolvedTheme === "dark") {
-      src = "https://www.iconsdb.com/icons/preview/white/linkedin-3-xl.png";
-      size = { w: 40, h: 40 };
-    }
-    return (
-      <Image src={src} width={size.w} height={size.h} />
-    );
-  }
-
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-li-gray-800 pt-1.5 px-1">
       <div className="flex flex-row items-center place-content-between max-w-screen-lg mx-auto">
         {/* left */}
         <div className="flex items-center flex-row flex-shrink-0 gap-2">
-          {_renderLogo()}
+          <LinkedInLogo />
           <div className="flex items-center space-x-1 md:bg-li-blue-100 dark:md:bg-gray-700 py-2.5 px-4 rounded">
             <MdSearch className="hidden md:inline-flex text-2xl" />
             <input placeholder="Search" className="hidden md:inline-flex bg-transparent focus:outline-none placeholder-black/70 dark:placeholder-white/75 flex-grow" />

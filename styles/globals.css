@@ -21,14 +21,27 @@ div#__next {
         font-size: 14px;
         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     }
+
     body {
-        @apply bg-white
+        @apply bg-white;
+        @apply text-black
+    }
+    html.dark body {
+        @apply bg-li-black;
+        @apply text-white;
     }
 }
 
 @layer components {
     .intent {
         @apply flex flex-row items-center justify-between hover:shadow-xl p-4 cursor-pointer rounded-lg text-black bg-white m-4 xl:mx-0
+    }
+
+    .text-dimmed {
+        @apply text-gray-500
+    }
+    .dark .text-dimmed {
+        @apply text-gray-200
     }
 
     /* This replicates a Material Input experience (with the placeholder moving to to the top of the field when focused) */

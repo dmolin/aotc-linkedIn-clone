@@ -4,8 +4,6 @@ import { initials } from "@/shared/utils/string_utils";
 
 const Avatar = props => {
   const session = useSession();
-  console.log("SESSION", session);
-
   if (session.status !== "authenticated") return null;
 
   const className = `w-[72px] h-[72px] border-white rounded-full bg-gray-200 ${props.className || ""}`;

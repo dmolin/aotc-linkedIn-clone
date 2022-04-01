@@ -9,7 +9,7 @@ export default function AppLayout (props) {
   }
 
   return (
-    <div className="bg-li-gray-100 dark:bg-li-black dark:text-white h-screen">
+    <div className="bg-li-gray-100 h-screen">
       {props.children}
     </div>
   );

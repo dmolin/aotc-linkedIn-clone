@@ -7,7 +7,7 @@ const SignInButton = ({ providers }) => {
   return (
     <Popover2
       positioningStrategy="absolute"
-      placement="bottom"
+      placement="bottom-end"
       portalClassName="signin-menu-popover"
       content={
         <div className="p-4 px-6 pb-6 flex flex-col gap-2 content-center">
