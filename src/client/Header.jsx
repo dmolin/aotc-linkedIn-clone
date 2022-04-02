@@ -1,47 +1,15 @@
-import Image from "next/image";
 import { MdSearch, MdHome, MdPeople } from "react-icons/md";
 import { BsBriefcaseFill, BsFillChatDotsFill } from "react-icons/bs";
 import { IoNotifications } from "react-icons/io5";
 import { SiGravatar } from "react-icons/si";
 import { CgMenuGridR } from "react-icons/cg";
-import { motion } from "framer-motion";
+import { HiUserCircle } from "react-icons/hi";
 
 import HeaderLink from "@/client/HeaderLink";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import LinkedInLogo from "@/client/LinkedInLogo";
+import ThemeToggle from "@/client/ThemeToggle";
 
 const Header = (props) => {
-  const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme, theme } = useTheme();
-
-  // this is for making theming works preventing hydration warnings with SSR
-  useEffect(() => setMounted(true), []);
-
-  const _renderThemeToggle = () => {
-    if (!mounted) return null;
-
-    return (
-      <div
-        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-        className={`bg-gray-600 flex flex-row items-center px-0.5 rounded-full h-6 w-12 cursor-pointer flex-shrink-0 relative ${resolvedTheme === "dark" ? "justify-end" : "justify-start"}`}
-      >
-        <span className="absolute left-0.5">🌜</span>
-        <span className="absolute right-0.5">🌝</span>
-        { /* animated toggle */}
-        <motion.div
-          className={`w-5 h-5 bg-white rounded-full z-40`}
-          layout
-          transition={{
-            type: "spring",
-            stiffness: 700,
-            damping: 30
-          }}
-        />
-      </div>
-    );
-  }
-
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-li-gray-800 pt-1.5 px-1">
       <div className="flex flex-row items-center place-content-between max-w-screen-lg mx-auto">
@@ -61,10 +29,10 @@ const Header = (props) => {
           <HeaderLink icon={BsBriefcaseFill} text="Jobs" feed hidden />
           <HeaderLink icon={BsFillChatDotsFill} text="Messaging" feed />
           <HeaderLink icon={IoNotifications} text="Notifications" feed />
-          <HeaderLink icon={SiGravatar} text="Me" feed avatar hidden />
+          <HeaderLink icon={HiUserCircle} text="Me" feed avatar hidden />
           <HeaderLink icon={CgMenuGridR} text="Work" feed hidden />
 
-          {_renderThemeToggle()}
+          <ThemeToggle />
         </div>
       </div>
     </header>
