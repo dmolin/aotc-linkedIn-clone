@@ -30,7 +30,7 @@ const LIPassword = (props) => {
         className="pr-20"
         rightElement={
           <button
-            className="p-2 hover:bg-gray-200 cursor-pointer text-gray-700"
+            className="p-2 hover:bg-gray-200 cursor-pointer text-gray-700 dark:text-gray-300"
             onClick={_toggleVisibility}
           >
             {visible ? "Hide" : "Show"}

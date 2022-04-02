@@ -10,7 +10,7 @@ const SignInButton = ({ providers }) => {
       placement="bottom-end"
       portalClassName="signin-menu-popover"
       content={
-        <div className="p-4 px-6 pb-6 flex flex-col gap-2 content-center">
+        <div className="p-4 px-6 pb-6 flex flex-col gap-2 content-center text-gray-800">
           <div className="text-md font-semibold mb-2">How do you want to Sign In?</div>
           {Object.values(_.omit(providers, ["credentials"])).map(p => (
             <button

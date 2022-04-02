@@ -73,4 +73,12 @@ div#__next {
     .li-panel {
         @apply bg-white dark:bg-li-gray-800 rounded-lg overflow-hidden relative flex flex-col border border-gray-300 dark:border-none
     }
+
+    .li-selectable {
+        @apply hover:bg-gray-200 dark:hover:bg-gray-600
+    }
+
+    .li-border {
+        @apply border-t border-t-gray-200 dark:border-t-gray-600
+    }
 }

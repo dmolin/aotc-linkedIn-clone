@@ -12,7 +12,7 @@ const DashboardPage = (props) => {
       </Head>
       <Header />
 
-      <main className="flex justify-center gap-x-5 px-4 sm:px-12 py-6 max-w-screen-li-desktop mx-auto">
+      <main className="flex justify-center gap-x-5 px-4 lg:px-0 py-6 max-w-screen-lg mx-auto">
         <div className="flex flex-col md:flex-row gap-5 flex-grow">
           {/* sidebar */}
           <Sidebar />

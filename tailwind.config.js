@@ -15,7 +15,7 @@ module.exports = {
         lg: '1128px',
         lgp: '1161px',
         "li-tablet": '768px',
-        "li-desktop": '960px',
+        "li-desktop": '1128px',
         "2lg": '1161px',
         "3lg": '1200px'
 

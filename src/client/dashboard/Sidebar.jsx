@@ -2,16 +2,20 @@ import _ from "lodash";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Avatar from "@/client/Avatar";
+import { HiBookmark } from "react-icons/hi";
 
 const Sidebar = props => {
   const { data }  = useSession();
 
   console.log("SESSION", data);
 
-  const _renderStat = (name, value) => (
-    <li className="flex flex-row place-content-between gap-2">
-      <h4 className="text-dimmed font-bold">{name}</h4>
-      <span className="text-blue-500 font-bold">{value}</span>
+  const _renderStat = (name, value, extra) => (
+    <li className="flex flex-row place-content-between gap-2 px-4 py-2 li-selectable">
+      <div>
+        <h4 className="text-dimmed font-bold dark:text-white/50">{name}</h4>
+        {extra || null}
+      </div>
+      <span className="text-blue-400 font-bold">{value}</span>
     </li>
   );
 
@@ -38,12 +42,24 @@ const Sidebar = props => {
           </div>
         </div>
         {/* stats */}
-        <div className="hidden md:block border-t border-t-gray-200 dark:border-t-gray-600 py-4 px-4 text-sm">
-          <ul className="flex flex-col gap-2">
-            {_renderStat("Who viewed your profile", 321)}
-            {_renderStat("Connections", 1290)}
-          </ul>
-          <a className="font-bold pt-2">Manage your network</a>
+        <div className="hidden md:block">
+          <div className="li-border py-4 text-sm">
+            <ul className="flex flex-col">
+              {_renderStat("Who viewed your profile", 321)}
+              {_renderStat("Connections", 1290, <a className="font-bold pt-2">Manage your network</a>)}
+            </ul>
+          </div>
+          <div className="flex li-border li-selectable flex-col gap-0 py-4 text-sm px-4">
+            <span className="text-dimmed text-sm">Access exclusive tools & insights</span>
+            <div>
+              <span className="w-3 h-3 bg-gradient-to-tr from-yellow-700 to-yellow-200 inline-block rounded-sm mr-1" />
+              <span className="font-bold">Try premium for free</span>
+            </div>
+          </div>
+          <div className="flex flex-row gap-2 li-selectable li-border px-4 py-2">
+            <HiBookmark className="text-xl -mx-1"/>
+            <span className="font-bold">My items</span>
+          </div>
         </div>
       </div>
       {/* bottom */}
