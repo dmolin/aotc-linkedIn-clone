@@ -2,9 +2,9 @@ import Head from "next/head";
 import { signOut } from "next-auth/react";
 
 import Header from "@/client/Header";
-import Sidebar from "@/client/dashboard/Sidebar";
+import Sidebar from "@/client/feed/Sidebar";
 
-const DashboardPage = (props) => {
+const FeedPage = (props) => {
   return (
     <div>
       <Head>
@@ -28,4 +28,4 @@ const DashboardPage = (props) => {
   )
 };
 
-export default DashboardPage;
+export default FeedPage;

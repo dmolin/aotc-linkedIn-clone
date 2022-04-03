@@ -16,7 +16,7 @@ import SignInPanel from "./SignInPanel";
 import LinkedInLogo from "@/client/LinkedInLogo";
 import BlankLayout from "@/client/layouts/BlankLayout";
 
-const LoginPage = ({ providers }) => {
+const SignInPage = ({ providers }) => {
   const router = useRouter();
   const { status } = useSession();
 
@@ -27,7 +27,7 @@ const LoginPage = ({ providers }) => {
   }
 
   if (status === "authenticated") {
-    router.push("/app");
+    router.push("/app/feed");
     return (
       <div>Redirecting...</div>
     );
@@ -75,6 +75,6 @@ const LoginPage = ({ providers }) => {
   );
 };
 
-LoginPage.layout = BlankLayout;
+SignInPage.layout = BlankLayout;
 
-export default LoginPage;
+export default SignInPage;

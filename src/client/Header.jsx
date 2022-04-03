@@ -12,7 +12,7 @@ import ThemeToggle from "@/client/ThemeToggle";
 const Header = (props) => {
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-li-gray-800 pt-1.5 px-1">
-      <div className="flex flex-row items-center place-content-between max-w-screen-lg mx-auto">
+      <div className="flex flex-row _items-center place-items-stretch place-content-between max-w-screen-lg mx-auto">
         {/* left */}
         <div className="flex items-center flex-row flex-shrink-0 gap-2">
           <LinkedInLogo />
@@ -23,7 +23,7 @@ const Header = (props) => {
         </div>
 
         {/* right */}
-        <div className="flex items-center flex-row gap-2">
+        <div className="flex _items-center flex-row gap-2">
           <HeaderLink icon={MdHome} text="Home" feed active />
           <HeaderLink icon={MdPeople} text="My Network" feed  />
           <HeaderLink icon={BsBriefcaseFill} text="Jobs" feed hidden />
@@ -32,7 +32,9 @@ const Header = (props) => {
           <HeaderLink icon={HiUserCircle} text="Me" feed avatar hidden />
           <HeaderLink icon={CgMenuGridR} text="Work" feed hidden />
 
-          <ThemeToggle />
+          <div className="flex flex-col place-content-center">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>

@@ -78,6 +78,10 @@ div#__next {
         @apply hover:bg-gray-200 dark:hover:bg-gray-600
     }
 
+    .li-clickable {
+        @apply cursor-pointer
+    }
+
     .li-border {
         @apply border-t border-t-gray-200 dark:border-t-gray-600
     }

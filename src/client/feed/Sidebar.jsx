@@ -3,6 +3,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Avatar from "@/client/Avatar";
 import { HiBookmark } from "react-icons/hi";
+import SocialPanel from "@/client/feed/SocialPanel";
 
 const Sidebar = props => {
   const { data }  = useSession();
@@ -10,9 +11,9 @@ const Sidebar = props => {
   console.log("SESSION", data);
 
   const _renderStat = (name, value, extra) => (
-    <li className="flex flex-row place-content-between gap-2 px-4 py-2 li-selectable">
+    <li className="flex flex-row place-content-between gap-2 px-4 py-2 li-selectable li-clickable">
       <div>
-        <h4 className="text-dimmed font-bold dark:text-white/50">{name}</h4>
+        <h4 className="leading-4 text-dimmed font-bold dark:text-white/50">{name}</h4>
         {extra || null}
       </div>
       <span className="text-blue-400 font-bold">{value}</span>
@@ -20,7 +21,7 @@ const Sidebar = props => {
   );
 
   return (
-    <div className="flex-row gap-2 min-w-max 2lg:w-[250px]">
+    <div className="flex flex-col gap-2 min-w-max 2lg:w-[250px]">
       {/* top */}
       <div className="li-panel">
         {/* profile */}
@@ -49,20 +50,21 @@ const Sidebar = props => {
               {_renderStat("Connections", 1290, <a className="font-bold pt-2">Manage your network</a>)}
             </ul>
           </div>
-          <div className="flex li-border li-selectable flex-col gap-0 py-4 text-sm px-4">
+          <div className="flex li-border li-selectable li-clickable flex-col gap-0 py-4 text-sm px-4">
             <span className="text-dimmed text-sm">Access exclusive tools & insights</span>
             <div>
               <span className="w-3 h-3 bg-gradient-to-tr from-yellow-700 to-yellow-200 inline-block rounded-sm mr-1" />
               <span className="font-bold">Try premium for free</span>
             </div>
           </div>
-          <div className="flex flex-row gap-2 li-selectable li-border px-4 py-2">
+          <div className="flex flex-row gap-2 li-selectable li-clickable li-border px-4 py-2 text-gray-800 dark:text-white/75">
             <HiBookmark className="text-xl -mx-1"/>
-            <span className="font-bold">My items</span>
+            <span className="font-bold text-sm">My items</span>
           </div>
         </div>
       </div>
       {/* bottom */}
+      <SocialPanel className="hidden md:block" />
     </div>
   );
 };
