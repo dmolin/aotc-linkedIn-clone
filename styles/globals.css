@@ -85,4 +85,8 @@ div#__next {
     .li-border {
         @apply border-t border-t-gray-200 dark:border-t-gray-600
     }
+
+    .li-link {
+        @apply text-blue-600 cursor-pointer
+    }
 }
