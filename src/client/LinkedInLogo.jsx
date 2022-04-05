@@ -1,9 +1,16 @@
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const LinkedInLogo = props => {
   const { extended, ...imageProps } = props;
+  const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
+
+  // theme cannot be accessed while SSR, so we wait until we're mounted to use it
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   const types = {
     short: {
@@ -29,6 +36,8 @@ const LinkedInLogo = props => {
   }
 
   const logo = types[extended ? "extended" : "short"][resolvedTheme];
+
+  console.log("LOGO", logo);
   return (
     <Image src={logo?.src} width={logo?.size?.w} height={logo?.size?.h} {...imageProps} />
   );

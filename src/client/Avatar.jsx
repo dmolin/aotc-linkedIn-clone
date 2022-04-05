@@ -3,10 +3,20 @@ import Image from "next/image";
 import { initials } from "@/shared/utils/string_utils";
 
 const Avatar = props => {
+  const { size = "medium" } = props;
   const session = useSession();
   if (session.status !== "authenticated") return null;
 
-  const className = `w-[72px] h-[72px] border-white rounded-full bg-gray-200 ${props.className || ""}`;
+  const _getSize = () => {
+    switch (size) {
+      case "small":
+        return "w-[48px] h-[48px]";
+      case "medium":
+        return "w-[72px] h-[72px]";
+    }
+  };
+
+  const className = `${_getSize()} border-white rounded-full bg-gray-200 ${props.className || ""}`;
   const _onImageError = (ev) => {
     const target = ev.target;
     if (!target) return;

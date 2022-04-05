@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { Menu, MenuItem } from "@blueprintjs/core";
 import { Popover2 } from "@blueprintjs/popover2";
 import { IoIosGitNetwork } from "react-icons/io";

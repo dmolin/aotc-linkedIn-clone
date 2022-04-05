@@ -1,10 +1,13 @@
-import { getProviders } from "next-auth/react";
+import { getProviders, getSession } from "next-auth/react";
 
 export async function getServerSideProps (context) {
   const providers = await getProviders();
+  // since we want to SSR this page, we also fetch the session that will be provided to the client
+  // via useSession() and the SessionProvider
+  const session = await getSession(context);
 
   return {
-    props: { providers }
+    props: { providers, session }
   };
 }
 

@@ -3,6 +3,7 @@ import { signOut } from "next-auth/react";
 
 import Header from "@/client/Header";
 import Sidebar from "@/client/feed/Sidebar";
+import Feed from "@/client/feed/Feed";
 
 const FeedPage = (props) => {
   return (
@@ -17,9 +18,7 @@ const FeedPage = (props) => {
           {/* sidebar */}
           <Sidebar />
           {/* feed */}
-          <div className="flex-1 li-panel p-4">
-            some content
-          </div>
+          <Feed />
         </div>
         {/* widgets */}
       </main>
