@@ -13,7 +13,7 @@ const Sidebar = props => {
   const _renderStat = (name, value, extra) => (
     <li className="flex flex-row place-content-between gap-2 px-4 py-2 li-selectable li-clickable">
       <div>
-        <h4 className="leading-4 text-dimmed font-bold dark:text-white/50">{name}</h4>
+        <h4 className="leading-4 li-label dark:text-white/50">{name}</h4>
         {extra || null}
       </div>
       <span className="text-blue-600 font-bold">{value}</span>

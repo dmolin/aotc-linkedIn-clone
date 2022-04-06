@@ -89,4 +89,8 @@ div#__next {
     .li-link {
         @apply text-blue-600 cursor-pointer
     }
+
+    .li-label {
+        @apply text-gray-500 font-bold
+    }
 }
