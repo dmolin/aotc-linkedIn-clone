@@ -1,6 +1,6 @@
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import { initials } from "@/shared/utils/string_utils";
+import { initials } from "@/shared/utils/stringUtils";
 
 const Avatar = props => {
   const { size = "medium" } = props;

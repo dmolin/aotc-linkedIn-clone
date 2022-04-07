@@ -2,7 +2,7 @@ import { Button } from "@blueprintjs/core";
 import LIInput from "@/client/LIInput";
 import LIPassword from "@/client/LIPassword";
 import { useState } from "react";
-import { swallowEvent } from "@/shared/utils/events_utils";
+import { swallowEvent } from "@/client/utils/eventsUtils";
 import { signIn } from "next-auth/react";
 
 const SignInPanel = (props) => {

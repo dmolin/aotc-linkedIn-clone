@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { HiPhotograph } from "react-icons/hi";
+import { useRecoilState } from "recoil";
 
 import Avatar from "@/client/Avatar";
+import { createPostModalState } from "@/client/state/atoms/modalAtoms";
 
 const PostLink = props => {
   const { content, icon = HiPhotograph, className = "" } = props;
@@ -18,13 +20,17 @@ const PostLink = props => {
 };
 
 const CreatePost = props => {
+  const [modalState, setModalState] = useRecoilState(createPostModalState);
+
+  console.log("modal state", modalState);
+
   return (
     <div className="flex-1 li-panel p-4 flex-col gap-2">
       <div className="flex flex-row gap-4 place-items-center">
         <Avatar size="small" className="li-clickable" />
 
         <motion.button
-          onClick={() => {}}
+          onClick={() => setModalState({ ...modalState, open: !modalState.open })}
           className="text-left li-clickable flex-1 border border-gray-300 bg-white text-gray-600 dark:text-white/75 dark:bg-transparent dark:border-white/40 hover:bg-gray-100 dark:hover:bg-gray-6 00 py-4 px-8 font-bold rounded-full my-2"
         >
           Start a post

@@ -1,5 +1,6 @@
 import { SessionProvider } from "next-auth/react"
 import { ThemeProvider } from "next-themes";
+import { RecoilRoot } from "recoil";
 import '@/styles/globals.css'
 import Head from "next/head";
 
@@ -13,9 +14,11 @@ function MyApp({ Component, pageProps }) {
         <Head>
           <title>Attack of the clones - LinkedIn clone</title>
         </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <RecoilRoot>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </RecoilRoot>
       </SessionProvider>
     </ThemeProvider>
   );
