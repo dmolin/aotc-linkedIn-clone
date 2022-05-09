@@ -1,22 +1,6 @@
-import { motion } from "framer-motion";
-import _ from "lodash";
-import { HiOutlineX } from "react-icons/hi";
-import { Classes, Dialog, DialogProps } from "@blueprintjs/core";
+import LIModalBlueprint from "@/client/LIModalBlueprint";
+import LIModalInHouse from "@/client/LIModalInHouse";
 
-
-import Dimmer from "@/client/Dimmer";
-import FocusTrap from "@/client/FocusTrap";
-
-const LIModal = props => {
-  const { title, onClose, children } = props;
-
-  return (
-    <Dialog isOpen onClose={onClose} title={title}>
-      <div className={Classes.DIALOG_BODY}>
-        {children}
-      </div>
-    </Dialog>
-  );
-}
+const LIModal = LIModalBlueprint;
 
 export default LIModal;

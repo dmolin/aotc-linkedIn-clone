@@ -22,7 +22,7 @@ const FocusTrap = props => {
   };
 
   useEffect(() => {
-    trapRef.current.focus();
+    trapRef.current?.children[0]?.focus();
     document.addEventListener("focus", _checkFocus, true);
     return () => {
       document.removeEventListener("focus", _checkFocus, true);

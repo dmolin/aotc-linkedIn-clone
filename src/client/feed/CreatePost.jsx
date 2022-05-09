@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 import Avatar from "@/client/Avatar";
 import { createPostModalState } from "@/client/state/atoms/modalAtoms";
 import Dimmer from "@/client/Dimmer";
-import LIModal from "@/client/LIModalInHouse";
+import LIModal from "@/client/LIModal";
 
 const PostLink = props => {
   const { content, icon = HiPhotograph, className = "" } = props;
@@ -24,7 +24,7 @@ const PostLink = props => {
 const CreatePost = props => {
   const [modalState, setModalState] = useRecoilState(createPostModalState);
 
-  console.log("modal state", modalState);
+  // console.log("modal state", modalState);
 
   return (
     <div className="flex-1 li-panel p-4 flex-col gap-2">

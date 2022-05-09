@@ -4,6 +4,7 @@ import { HiOutlineX } from "react-icons/hi";
 
 import Dimmer from "@/client/Dimmer";
 import FocusTrap from "@/client/FocusTrap";
+import { useRef } from "react";
 
 const TYPE = {
   dropIn: {
@@ -28,8 +29,17 @@ const TYPE = {
 // in-house version of a Modal, with background dimmer
 const LIModal = props => {
   const { type = TYPE.dropIn, title, children, onClose, closeOnEsc = true } = props;
+  const dimmerRef = useRef();
+
+  const _onClose = e => {
+    console.log("event", e.target, dimmerRef.current);
+    if (e.target === dimmerRef.current && _.isFunction(onClose)) {
+      onClose();
+    }
+  };
+
   return (
-    <Dimmer onClick={onClose}>
+    <Dimmer onClick={_onClose} dimmerRef={dimmerRef}>
       <FocusTrap onExit={closeOnEsc ? onClose : () => {}}>
         <AnimatePresence>
           <motion.div
