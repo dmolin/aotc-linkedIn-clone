@@ -37,7 +37,6 @@ const LinkedInLogo = props => {
 
   const logo = types[extended ? "extended" : "short"][resolvedTheme];
 
-  console.log("LOGO", logo);
   return (
     <Image src={logo?.src} width={logo?.size?.w} height={logo?.size?.h} {...imageProps} />
   );

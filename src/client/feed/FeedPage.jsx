@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { signOut } from "next-auth/react";
 
 import Header from "@/client/Header";
 import Sidebar from "@/client/feed/Sidebar";
@@ -22,7 +21,6 @@ const FeedPage = (props) => {
         </div>
         {/* widgets */}
       </main>
-      <button className="bp4-button mt-8" onClick={() => signOut()}>Sign out</button>
     </div>
   )
 };

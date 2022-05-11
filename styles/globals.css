@@ -30,6 +30,22 @@ div#__next {
         @apply bg-li-black;
         @apply text-white;
     }
+
+    /* external libraries overrides */
+    html.light .bp4-dialog {
+        @apply bg-white;
+    }
+
+    html.dark .bp4-dialog,
+    html.dark .bp4-dialog-header,
+    html.dark .bp4-heading {
+        @apply bg-li-gray-800;
+        @apply text-white;
+    }
+
+    html.dark .bp4-dialog-header {
+        @apply shadow-sm shadow-gray-600;
+    }
 }
 
 @layer components {
