@@ -1,7 +1,16 @@
-## What's this?
+## AOTC: Replicating part of the LinkedIn experience
 
 A small project replicating part of the LinkedIn UI exclusively for study purposes.
 This is no part of any production or commercial endeavour and has solely the purpose of experimentation and study.
+
+### Tech-stack
+
+- React
+- NextJS
+- Authentication with Next-Auth
+- MongoDB
+- Tailwind CSS
+
 
 ### Screenshots
 
